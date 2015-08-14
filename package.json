@@ -2,8 +2,10 @@
   "name": "deep-resolve",
   "version": "2.0.0",
   "description": "Resolve all Promises in an object.",
-  "main": "index.js",
+  "main": "./lib",
   "scripts": {
+    "build": "babel --out-dir lib index.js",
+    "prepublish": "npm run build",
     "test": "tape test/**/*.js"
   },
   "repository": {
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/joseph-onsip/deep-resolve",
   "devDependencies": {
+    "babel": "^5.8.21",
     "native-promise-only": "^0.8.1",
     "tape": "^4.1.0"
   },
