@@ -1,9 +1,7 @@
-'use strict';
+import traverse from 'traverse'
+import isPromise from 'is-promise'
 
-var traverse = require('traverse');
-var isPromise = require('is-promise');
-
-module.exports = deepResolve;
+export default deepResolve
 
 function deepResolve (obj) {
   var promises = [];
