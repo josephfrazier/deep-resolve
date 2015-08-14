@@ -6,8 +6,9 @@ export default deepResolve
 function deepResolve (obj) {
   var t = traverse(obj);
   var promises = t.paths()
-    .filter(path => isPromise(t.get(path)))
-    .map(path => t.get(path).then(v => t.set(path, v)))
+    .map(path => ({path, node: t.get(path)}))
+    .filter(({path, node}) => isPromise(node))
+    .map(({path, node}) => node.then(value => t.set(path, value)))
 
   return Promise.all(promises).then(() => obj);
 }
