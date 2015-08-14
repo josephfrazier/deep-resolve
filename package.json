@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/joseph-onsip/deep-resolve/issues"
   },
-  "homepage": "https://github.com/joseph-onsip/deep-resolve"
+  "homepage": "https://github.com/joseph-onsip/deep-resolve",
+  "devDependencies": {
+    "native-promise-only": "^0.8.1",
+    "tape": "^4.1.0",
+    "traverse": "^0.6.6"
+  }
 }
