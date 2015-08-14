@@ -12,7 +12,5 @@ function deepResolve (obj) {
     }
   });
 
-  return Promise.all(promises).then(function () {
-    return obj;
-  });
+  return Promise.all(promises).then(() => obj);
 }
