@@ -1,9 +1,7 @@
 import traverse from 'traverse'
 import isPromise from 'is-promise'
 
-export default deepResolve
-
-function deepResolve (obj) {
+export default obj => {
   var t = traverse(obj);
   var promises = t.paths()
     .map(path => ({path, node: t.get(path)}))
