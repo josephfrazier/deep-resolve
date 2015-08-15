@@ -1,10 +1,8 @@
-'use strict';
+import 'native-promise-only'
 
-require('native-promise-only');
-
-var test = require('tape');
-var traverse = require('traverse');
-var deepResolve = require('../');
+import test from 'tape'
+import traverse from 'traverse'
+import deepResolve from '../'
 
 test('example from traverse readme', function (t) {
   t.plan(1);
