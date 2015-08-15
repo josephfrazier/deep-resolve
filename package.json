@@ -12,6 +12,7 @@
   "scripts": {
     "build": "babel --out-dir lib src",
     "prepublish": "npm run build && npm test",
+    "lint": "eslint .",
     "test": "cd test && babel index.js | node -- -"
   },
   "repository": {
