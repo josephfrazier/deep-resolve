@@ -12,7 +12,7 @@
   "scripts": {
     "build": "babel --out-dir lib src",
     "prepublish": "npm run build && npm test",
-    "test": "tape test/**/*.js"
+    "test": "cd test && babel index.js | node -- -"
   },
   "repository": {
     "type": "git",
