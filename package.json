@@ -3,6 +3,12 @@
   "version": "2.0.0",
   "description": "Resolve all Promises in an object.",
   "main": "./lib",
+  "browser": "./src",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "scripts": {
     "build": "babel --out-dir lib src",
     "prepublish": "npm run build",
@@ -24,6 +30,7 @@
     "tape": "^4.1.0"
   },
   "dependencies": {
+    "babelify": "^6.1.3",
     "is-promise": "^2.0.0",
     "traverse": "^0.6.6"
   }
