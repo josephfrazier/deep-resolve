@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "babel --out-dir lib src",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm test",
     "test": "tape test/**/*.js"
   },
   "repository": {
