@@ -4,7 +4,7 @@
   "description": "Resolve all Promises in an object.",
   "main": "./lib",
   "scripts": {
-    "build": "babel --out-dir lib src",
+    "build": "babel --source-maps true --out-dir lib src",
     "prepublish": "npm run build && npm test",
     "lint": "eslint .",
     "test": "npm run lint && cd test && babel index.js | node -- -"
